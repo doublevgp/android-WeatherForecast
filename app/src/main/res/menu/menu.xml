@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/navigation_home"
+        android:icon="@drawable/ic_baseline_home_24"
+        android:title="主页" />
+
+    <item
+        android:id="@+id/navigation_city_list"
+        android:icon="@drawable/ic_baseline_view_headline_24"
+        android:title="城市列表" />
+
+    <item
+        android:id="@+id/navigation_subscribe"
+        android:icon="@drawable/ic_baseline_is_favorite_24"
+        android:title="我的关注" />
+
+    <item
+        android:id="@+id/navigation_map"
+        android:icon="@drawable/ic_baseline_map_24"
+        android:title="地图" />
+</menu>

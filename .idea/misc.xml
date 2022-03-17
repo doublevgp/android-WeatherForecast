@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DesignSurface">
+    <option name="filePathToZoomLevelMap">
+      <map>
+        <entry key="app/src/main/res/drawable/ic_baseline_favorite_24.xml" value="0.123828125" />
+        <entry key="app/src/main/res/layout/activity_main.xml" value="0.1503623188405797" />
+        <entry key="app/src/main/res/layout/city_row_view.xml" value="0.335" />
+        <entry key="app/src/main/res/layout/citylist.xml" value="0.14895833333333333" />
+        <entry key="app/src/main/res/layout/citylist_fragment.xml" value="0.11171875" />
+        <entry key="app/src/main/res/layout/delete_merge.xml" value="0.16120218579234974" />
+        <entry key="app/src/main/res/layout/fav_row_view.xml" value="0.11171875" />
+        <entry key="app/src/main/res/layout/forecast_item.xml" value="0.14895833333333333" />
+        <entry key="app/src/main/res/layout/home_fragment.xml" value="0.14895833333333333" />
+        <entry key="app/src/main/res/layout/subscribe_fragment.xml" value="0.1133879781420765" />
+        <entry key="app/src/main/res/layout/weather_aqi.xml" value="0.14895833333333333" />
+        <entry key="app/src/main/res/layout/weather_now.xml" value="0.1503623188405797" />
+        <entry key="app/src/main/res/menu/menu.xml" value="0.28229166666666666" />
+        <entry key="app/src/main/res/menu/opt_menu.xml" value="0.14895833333333333" />
+      </map>
+    </option>
+  </component>
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="JDK" project-jdk-type="JavaSDK">
+    <output url="file://$PROJECT_DIR$/build/classes" />
+  </component>
+  <component name="ProjectType">
+    <option name="id" value="Android" />
+  </component>
+</project>
