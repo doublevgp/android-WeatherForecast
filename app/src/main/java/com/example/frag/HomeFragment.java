@@ -20,9 +20,11 @@ import androidx.swiperefreshlayout.widget.SwipeRefreshLayout;
 
 import com.bumptech.glide.Glide;
 import com.example.frag.data.AirQualityData;
+import com.example.frag.data.City;
 import com.example.frag.data.DailyForecast;
 import com.example.frag.data.WeatherForecast;
 import com.example.frag.data.WeatherNow;
+import com.example.frag.db.CityDatabase;
 import com.example.frag.utility.DataBaseUtil;
 import com.example.frag.utility.WeatherApiUtil;
 
@@ -39,12 +41,15 @@ public class HomeFragment extends Fragment {
     TextView tv_aqi, tv_pm25;
     SwipeRefreshLayout swipeRefreshLayout;
     AtomicInteger requestCount = new AtomicInteger(0);
+    CityDatabase cityDatabase;
     public static final int CITY_REQ_CODE=0;
     private static final String KEY_WEATHER_ID="weather_id";
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         View v = inflater.inflate(R.layout.home_fragment, container, false);
+        cityDatabase = new CityDatabase(getActivity());
+        cityDatabase.open();
         tv_city = v.findViewById(R.id.title_city_tv);
         tv_update_time = v.findViewById(R.id.title_pub_time_tv);
         tv_temp = v.findViewById(R.id.now_temp_tv);
@@ -146,7 +151,9 @@ public class HomeFragment extends Fragment {
     }
 
     private void updateUiInfo(WeatherNow data) {
-        tv_city.setText(data.basic.location);
+//        tv_city.setText(data.basic.location);
+        City city = cityDatabase.getCityByWeatherId(weather_id);
+        tv_city.setText(city.getName());
         tv_update_time.setText(data.update.loc);
         tv_temp.setText(data.now.tmp + " ℃");
         tv_weather_info.setText(data.now.cond_txt);

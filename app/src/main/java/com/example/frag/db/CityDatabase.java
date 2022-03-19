@@ -165,7 +165,11 @@ public class CityDatabase {
         }
         return list;
     }
-
+    public City getCityByWeatherId(String weatherId) {
+        String sql = String.format("select * from %s where %s='%s'", CITY_TABLE, KEY_WEATHER_ID, weatherId);
+        City city = getCityListBySql(sql, null).get(0);
+        return city;
+    }
     public List<City> queryAllProvinces() {
         String sql = String.format("select * from %s where %s=0", CITY_TABLE, KEY_LEVEL);
         return getCityListBySql(sql, null);
